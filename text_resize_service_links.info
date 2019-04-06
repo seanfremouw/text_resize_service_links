@@ -1,0 +1,6 @@
+name = Text Resize Service Links
+description = <a href="https://www.drupal.org/project/service_links">Service Links</a> to do <a href="https://www.drupal.org/project/text_resize">Text Resize</a>
+core = 7.x
+package = Service Links
+dependencies[] = service_links
+dependencies[] = text_resize

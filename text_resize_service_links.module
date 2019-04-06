@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * Implements hook_service_links().
+ */
+function text_resize_service_links_service_links() {
+  $links['text_resize_increase'] = array(
+    'name' => t('Text resize - increase'),
+    'description' => t('Make text larger'),
+    'style' => 'text_resize_increase_service_link',
+    'text' => 'increase',
+    'image' => 'text_resize_increase.gif',
+    'link' => 'increase-link',
+  );
+  $links['text_resize_decrease'] = array(
+    'name' => t('Text resize - decrease'),
+    'description' => t('Make text smaller'),
+    'style' => 'text_resize_decrease_service_link',
+    'text' => 'decrease',
+    'image' => 'text_resize_decrease.gif',
+    'link' => 'decrease-link',
+  );
+  return $links;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function text_resize_service_links_theme() {
+  $theme['text_resize_increase_service_link'] = array(
+    'variables' => array(
+      'text' => NULL,
+      'image' => NULL,
+      'style' => NULL,
+      'link' => NULL,
+      'attributes' => array(),
+    ),
+    'file' => 'text_resize_service_links.theme.inc',
+  );
+  $theme['text_resize_decrease_service_link'] = array(
+    'variables' => array(
+      'text' => NULL,
+      'image' => NULL,
+      'style' => NULL,
+      'link' => NULL,
+      'attributes' => array(),
+    ),
+    'file' => 'text_resize_service_links.theme.inc',
+  );
+  return $theme;
+}
